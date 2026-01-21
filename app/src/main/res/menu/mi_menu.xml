@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/Item_Inicio" android:title="@string/Item_Inicio" android:icon="@drawable/ic_inicio" />
+    <item android:id="@+id/Item_Leaderboard" android:title="@string/Item_Leaderboaard" android:icon="@drawable/ic_leaderboard"/>
     <item android:id="@+id/Item_Ejercicios" android:title="@string/Item_Ejercicios" android:icon="@drawable/ic_ejercicios"/>
-    <item android:id="@+id/Item_Leaderboard" android:title="@string/Item_Leaderboard" android:icon="@drawable/ic_leaderboard"/>
+    <item android:id="@+id/Item_Amigos" android:title="@string/Item_Amigos" android:icon="@drawable/ic_amigos"/>
     <item android:id="@+id/Item_Cuenta" android:title="@string/Item_Cuenta" android:icon="@drawable/ic_cuenta"/>
 
 </menu>
