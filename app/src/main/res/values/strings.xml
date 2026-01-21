@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CodeRoyale</string>
+    <string name="Item_Inicio">Inicio</string>
+    <string name="Item_Ejercicios">Ejercicios</string>
+    <string name="Item_Cuenta">Cuenta</string>
+    <string name="Item_Leaderboaard">Leaderboard</string>
+
 </resources>
