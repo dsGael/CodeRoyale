@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.Item_Leaderboard->{
                     true
                 }
-                R.id. ->{
+                R.id.Item_Ejercicios->{
                     true
                 }
                 R.id.Item_Cuenta->{
