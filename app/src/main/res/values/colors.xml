@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="cr_azul_rey">#1D4E89</color>
+    <color name="cr_azul_oscuro">#0D2544</color>
+    <color name="cr_dorado">#FFD700</color>
+    <color name="cr_dorado_brillante">#FFF200</color>
+    <color name="cr_rojo_batalla">#E63946</color>
+    <color name="cr_beige_carta">#F1E4C3</color>
+    <color name="cr_texto_oscuro">#2B2B2B</color>
 </resources>

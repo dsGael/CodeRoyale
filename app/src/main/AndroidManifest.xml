@@ -14,15 +14,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeRoyale" >
         <activity
-            android:name=".Opciones_Login.Login_email"
+            android:name=".RegistroEmail"
             android:exported="false" />
+        <activity
+            android:name=".Opciones_Login.ActivityLoginEmail"
+            android:exported="false" />
+        <activity
+            android:name=".OpcionesLogin"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
