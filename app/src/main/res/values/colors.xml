@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="cr_azul_rey">#1D4E89</color>
-    <color name="cr_azul_oscuro">#0D2544</color>
-    <color name="cr_dorado">#FFD700</color>
-    <color name="cr_dorado_brillante">#FFF200</color>
-    <color name="cr_rojo_batalla">#E63946</color>
-    <color name="cr_beige_carta">#F1E4C3</color>
-    <color name="cr_texto_oscuro">#2B2B2B</color>
+    <color name="cr_azul_rey">#2B71E1</color>
+    <color name="cr_azul_oscuro">#0B1B33</color>
+    <color name="cr_dorado">#FFC107</color>
+    <color name="cr_dorado_brillante">#FEEF5D</color>
+    <color name="cr_rojo_batalla">#E12C2C</color>
+    <color name="cr_beige_carta">#F8F0D7</color>
+    <color name="cr_texto_oscuro">#1A1A1A</color>
 </resources>

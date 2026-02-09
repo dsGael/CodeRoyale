@@ -76,13 +76,13 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/Btn_ingresar"
-            android:text="¡BATALLA!"
+            android:text="@string/Btn_ingresar"
             android:textAllCaps="true"
             android:textStyle="bold"
             android:textSize="16sp"
             android:textColor="@android:color/white"
             android:layout_marginTop="25dp"
-            android:layout_width="@dimen/m_button_height"
+            android:layout_width="130dp"
             android:layout_height="60dp"
             app:backgroundTint="#E63946"
             app:cornerRadius="15dp"
