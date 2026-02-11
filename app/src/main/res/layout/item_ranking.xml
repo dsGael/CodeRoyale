@@ -54,6 +54,6 @@
             android:layout_height="wrap_content"
             android:text="+20 hoy"
             android:textSize="10sp"
-            android:textColor="@color/cr_verde_exito" /> </LinearLayout>
+            android:textColor="@color/cr_dorado" /> </LinearLayout>
 
 </LinearLayout>
