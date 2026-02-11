@@ -7,4 +7,5 @@
     <color name="cr_rojo_batalla">#E12C2C</color>
     <color name="cr_beige_carta">#F8F0D7</color>
     <color name="cr_texto_oscuro">#1A1A1A</color>
+    <color name="cr_blanco">#FFFFFF</color>
 </resources>

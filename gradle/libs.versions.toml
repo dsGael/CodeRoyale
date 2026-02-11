@@ -9,6 +9,7 @@ appcompat = "1.7.1"
 material = "1.13.0"
 activity = "1.12.2"
 constraintlayout = "2.2.1"
+googleServicesversion = "4.4.3"
 firebaseAuthV = "24.0.1"
 firebaseDatabaseV = "22.0.1"
 
@@ -27,4 +28,6 @@ firebaseDatabase  = { group = "com.google.firebase", name = "firebase-database",
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+googleService = { id = "com.google.gms.google-services", version.ref = "googleServicesversion" }
+
 

@@ -21,8 +21,10 @@ class RegistroEmail : AppCompatActivity() {
     private lateinit var progressDialog: ProgressDialog
 
     private lateinit var binding: ActivityRegistroEmailBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityRegistroEmailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         firebaseAuth = FirebaseAuth.getInstance()
