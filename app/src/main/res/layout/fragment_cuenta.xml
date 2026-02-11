@@ -29,7 +29,7 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="15dp"
-            android:src="@drawable/ic_settings"
+            android:src="@drawable/experiencia"
             app:tint="@color/cr_dorado_brillante" />
 
         <View
@@ -96,7 +96,10 @@
                     android:background="@android:color/white"
                     android:padding="12dp"
                     android:layout_marginEnd="5dp">
-                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_fire" app:tint="@color/cr_rojo_batalla"/>
+                    <ImageView android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/flame"
+                        app:tint="@color/cr_rojo_batalla"/>
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="1 día" android:textColor="@color/cr_texto_oscuro" android:textStyle="bold"/>
                 </LinearLayout>
 
@@ -108,7 +111,11 @@
                     android:background="@android:color/white"
                     android:padding="12dp"
                     android:layout_marginStart="5dp">
-                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_lightning" app:tint="@color/cr_azul_rey"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/experiencia"
+                        app:tint="@color/cr_azul_rey"/>
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="7836 EXP" android:textColor="@color/cr_texto_oscuro" android:textStyle="bold"/>
                 </LinearLayout>
             </LinearLayout>
