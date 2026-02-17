@@ -121,19 +121,6 @@
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/Btn_completar"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="30dp"
-                android:text="COMPLETAR PERFIL"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"
-                app:backgroundTint="@color/cr_azul_rey"
-                app:cornerRadius="8dp"
-                app:strokeColor="@color/cr_dorado"
-                app:strokeWidth="2dp" />
-
-            <com.google.android.material.button.MaterialButton
                 android:id="@+id/Btn_logout"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="match_parent"
