@@ -4,73 +4,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cr_beige_carta"
+    android:background="@color/cr_fondo"
     tools:context=".Fragmentos.FragmentLeaderboard">
 
+    <!-- TOP BAR -->
     <RelativeLayout
         android:id="@+id/RL_top_ranking"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="@color/cr_azul_rey">
+        android:layout_height="60dp"
+        android:background="@color/cr_superficie">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="CLASIFICACIÓN"
-            android:textColor="@android:color/white"
+            android:textColor="@color/cr_texto_primario"
             android:textStyle="bold"
-            android:textSize="18sp" />
+            android:letterSpacing="0.15"
+            android:textSize="16sp" />
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="16dp"
             android:src="@drawable/flame"
-            app:tint="@color/cr_dorado_brillante"/>
+            app:tint="@color/cr_fuego" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/cr_dorado" />
+            android:background="@color/cr_divisor" />
     </RelativeLayout>
 
+    <!-- LIGA BANNER -->
     <LinearLayout
         android:id="@+id/LL_banner_liga"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/RL_top_ranking"
-        android:background="@color/cr_azul_oscuro"
+        android:background="@color/cr_hero_bg"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
 
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:src="@drawable/flame"
-            app:tint="@color/cr_dorado"/>
+            app:tint="@color/cr_fuego" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="8dp"
             android:text="LIGA RUBÍ"
-            android:textColor="@color/cr_dorado_brillante"
+            android:textColor="@color/cr_texto_primario"
             android:textStyle="bold"
-            android:textSize="20sp"/>
+            android:letterSpacing="0.1"
+            android:textSize="20sp" />
 
-        <TextView
+        <!-- Countdown chip -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Termina en 2 días 4 horas"
-            android:textColor="@android:color/white"
-            android:textSize="12sp"/>
+            android:layout_marginTop="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/experiencia"
+                app:tint="@color/cr_acento" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="Termina en 2 días 4 horas"
+                android:textColor="@color/cr_texto_secundario"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/cr_divisor" />
     </LinearLayout>
 
+    <!-- RANKING LIST -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/Rv_leaderboard"
         android:layout_width="match_parent"

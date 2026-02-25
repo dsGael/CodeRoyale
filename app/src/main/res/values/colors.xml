@@ -8,4 +8,17 @@
     <color name="cr_beige_carta">#F8F0D7</color>
     <color name="cr_texto_oscuro">#1A1A1A</color>
     <color name="cr_blanco">#FFFFFF</color>
+
+    <color name="cr_fondo">#0D1117</color>
+    <color name="cr_superficie">#161B22</color>
+    <color name="cr_hero_bg">#0B1320</color>
+    <color name="cr_acento">#4D9FFF</color>
+    <color name="cr_fuego">#FF6B35</color>
+    <color name="cr_peligro">#FF4D4D</color>
+    <color name="cr_texto_primario">#E6EDF3</color>
+    <color name="cr_texto_secundario">#7D8590</color>
+    <color name="cr_divisor">#21262D</color>
+
+
 </resources>
+

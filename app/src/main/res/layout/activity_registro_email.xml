@@ -1,110 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistroEmail">
+    android:background="@color/cr_fondo">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="30dp">
+        android:padding="28dp">
 
-        
+
         <TextView
             android:text="@string/Txt_registro"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="22sp"
+            android:letterSpacing="0.1"
+            android:textColor="@color/cr_texto_primario"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp" />
 
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/registro" />
+        <TextView
+            android:text="Crea tu cuenta para comenzar"
+            android:textColor="@color/cr_texto_secundario"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp" />
 
-        <!--Email -->
+        <!-- EMAIL -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:boxCornerRadiusBottomEnd="8dp"
-            app:boxCornerRadiusBottomStart="8dp"
-            app:boxCornerRadiusTopEnd="8dp"
-            app:boxCornerRadiusTopStart="8dp"
-            app:boxStrokeColor="#1D4E89"
-            app:hintTextColor="#1D4E89"
-            app:boxBackgroundColor="#FFFFFF"
-            >
+            android:layout_marginBottom="14dp"
+            app:boxStrokeColor="@color/cr_acento"
+            app:hintTextColor="@color/cr_acento"
+            android:textColorHint="@color/cr_texto_secundario"
+            app:boxBackgroundColor="@color/cr_superficie"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/Et_email"
                 android:hint="@string/Et_email"
                 android:inputType="textEmailAddress"
+                android:textColor="@color/cr_texto_primario"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
 
+                />
         </com.google.android.material.textfield.TextInputLayout>
-        <!--Password-->
+
+        <!-- PASSWORD -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:boxCornerRadiusBottomEnd="8dp"
-            app:boxCornerRadiusBottomStart="8dp"
-            app:boxCornerRadiusTopEnd="8dp"
-            app:boxCornerRadiusTopStart="8dp"
+            android:layout_marginBottom="14dp"
+            android:textColorHint="@color/cr_texto_secundario"
+            app:boxStrokeColor="@color/cr_acento"
+            app:hintTextColor="@color/cr_acento"
+            app:boxBackgroundColor="@color/cr_superficie"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
             app:passwordToggleEnabled="true"
-            app:boxStrokeColor="#1D4E89"
-            app:hintTextColor="#1D4E89"
-            app:boxBackgroundColor="#FFFFFF"
-            >
+            app:passwordToggleTint="@color/cr_acento"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/Et_password"
                 android:hint="@string/Et_password"
                 android:inputType="textPassword"
+                android:textColor="@color/cr_texto_primario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-
         </com.google.android.material.textfield.TextInputLayout>
-        <!--Repetir el password-->
+
+        <!-- REPEAT PASSWORD -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:boxCornerRadiusBottomEnd="8dp"
-            app:boxCornerRadiusBottomStart="8dp"
-            app:boxCornerRadiusTopEnd="8dp"
-            app:boxCornerRadiusTopStart="8dp"
+            android:layout_marginBottom="28dp"
+            app:boxStrokeColor="@color/cr_acento"
+            app:hintTextColor="@color/cr_acento"
+            app:boxBackgroundColor="@color/cr_superficie"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
             app:passwordToggleEnabled="true"
-            app:boxStrokeColor="#1D4E89"
-            app:hintTextColor="#1D4E89"
-            app:boxBackgroundColor="#FFFFFF"
-            >
+            app:passwordToggleTint="@color/cr_acento"
+            android:textColorHint="@color/cr_texto_secundario"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/Et_r_password"
                 android:hint="@string/Et_r_password"
                 android:inputType="textPassword"
+                android:textColor="@color/cr_texto_primario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- REGISTER BUTTON -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/Btn_registrar"
             android:text="@string/Btn_registrarme"
             android:textAllCaps="true"
-            android:layout_width="180dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="15dp"
-            app:cornerRadius="8dp" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/cr_fondo"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            app:backgroundTint="@color/cr_acento"
+            app:cornerRadius="14dp" />
 
+    </LinearLayout>
 </RelativeLayout>

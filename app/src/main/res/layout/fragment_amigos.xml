@@ -4,82 +4,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cr_beige_carta"
+    android:background="@color/cr_fondo"
     tools:context=".Fragmentos.FragmentAmigos">
 
+    <!-- TOP BAR -->
     <RelativeLayout
         android:id="@+id/RL_top_amigos"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="@color/cr_azul_rey">
+        android:layout_height="60dp"
+        android:background="@color/cr_superficie">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="MIS ALIADOS"
-            android:textColor="@android:color/white"
+            android:textColor="@color/cr_texto_primario"
             android:textStyle="bold"
-            android:textSize="18sp" />
+            android:letterSpacing="0.15"
+            android:textSize="16sp" />
 
         <ImageView
-            android:layout_width="28dp"
-            android:layout_height="28dp"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="16dp"
             android:src="@drawable/flame"
-            app:tint="@color/cr_dorado_brillante" />
+            app:tint="@color/cr_fuego" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/cr_dorado" />
+            android:background="@color/cr_divisor" />
     </RelativeLayout>
 
+    <!-- CONTENT -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/RL_top_amigos"
         android:layout_marginBottom="90dp"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="16dp">
 
+        <!-- SEARCH BAR -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:padding="5dp"
+            android:layout_height="52dp"
             android:orientation="horizontal"
-            android:elevation="2dp"
-            android:layout_marginBottom="15dp">
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="45dp"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:hint="Buscar usuario..."
-                android:paddingStart="10dp"
-                android:textColor="@color/cr_texto_oscuro"
-                android:textSize="14sp" />
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="6dp">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="8dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/flame"
-                app:tint="@color/cr_azul_rey"/>
+                app:tint="@color/cr_texto_secundario" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:background="@android:color/transparent"
+                android:hint="Buscar usuario..."
+                android:textColorHint="@color/cr_texto_secundario"
+                android:textColor="@color/cr_texto_primario"
+                android:textSize="14sp"
+                android:inputType="text" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="Buscar"
+                android:textSize="12sp"
+                android:textColor="@color/cr_fondo"
+                app:backgroundTint="@color/cr_acento"
+                app:cornerRadius="10dp" />
         </LinearLayout>
 
+        <!-- SECTION LABEL -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TUS AMIGOS"
-            android:textColor="@color/cr_azul_oscuro"
-            android:textStyle="bold"
-            android:layout_marginBottom="10dp"/>
+            android:text="TUS ALIADOS"
+            android:textColor="@color/cr_texto_secundario"
+            android:textSize="11sp"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="12dp" />
 
+        <!-- LIST -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/Rv_amigos"
             android:layout_width="match_parent"

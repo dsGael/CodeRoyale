@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cr_beige_carta"
+    android:background="@color/cr_fondo"
     tools:context=".Fragmentos.FragmentCuenta">
 
+    <!-- TOP BAR -->
     <RelativeLayout
         android:id="@+id/RL_top"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="@color/cr_azul_rey">
+        android:layout_height="60dp"
+        android:background="@color/cr_superficie">
 
         <TextView
             android:id="@+id/Txt_nombre_top"
@@ -19,119 +20,430 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="MI CUENTA"
-            android:textColor="@android:color/white"
+            android:textColor="@color/cr_texto_primario"
             android:textStyle="bold"
-            android:textSize="18sp" />
+            android:letterSpacing="0.15"
+            android:textSize="16sp" />
 
         <ImageView
-            android:layout_width="28dp"
-            android:layout_height="28dp"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="16dp"
             android:src="@drawable/experiencia"
-            app:tint="@color/cr_dorado_brillante" />
+            app:tint="@color/cr_acento" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/cr_dorado" />
+            android:background="@color/cr_divisor" />
     </RelativeLayout>
 
+    <!-- SCROLL CONTENT -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/RL_top"
-        android:layout_marginBottom="90dp"> <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:background="@color/cr_azul_oscuro">
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/Iv_perfil"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_centerInParent="true"
-                android:padding="2dp"
-                android:src="@drawable/login"
-                app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent"
-                app:strokeColor="@color/cr_dorado"
-                app:strokeWidth="3dp" />
-
-            <TextView
-                android:id="@+id/Txt_username"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/Iv_perfil"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="8dp"
-                android:text="\@jorgedr12"
-                android:textColor="@color/cr_dorado_brillante"
-                android:textStyle="bold" />
-        </RelativeLayout>
+        android:layout_marginBottom="90dp"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:orientation="vertical">
+
+            <!-- HERO / AVATAR -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@color/cr_hero_bg">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/cr_acento" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/Iv_perfil"
+                    android:layout_width="118dp"
+                    android:layout_height="118dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="36dp"
+                    android:padding="3dp"
+                    android:src="@drawable/profile"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent"
+                    app:strokeColor="@color/cr_acento"
+                    app:strokeWidth="3dp" />
+
+                <TextView
+                    android:id="@+id/Txt_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Iv_perfil"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="jorgedr12"
+                    android:textColor="@color/cr_blanco"
+                    android:textSize="15sp"
+                    android:letterSpacing="0.05"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <!-- NIVEL Y PROGRESO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/cr_superficie"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Nivel 12 — Intermedio"
+                        android:textColor="@color/cr_texto_primario"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7836 / 10000 XP"
+                        android:textColor="@color/cr_acento"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:progress="78"
+                    android:max="100"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:background="@color/cr_divisor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="2164 XP para el siguiente nivel"
+                    android:textColor="@color/cr_texto_secundario"
+                    android:textSize="11sp" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="8dp">
+
+                <!-- ESTADÍSTICAS -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ESTADÍSTICAS"
+                    android:textColor="@color/cr_texto_secundario"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.15"
+                    android:layout_marginBottom="10dp" />
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:background="@android:color/white"
-                    android:padding="12dp"
-                    android:layout_marginEnd="5dp">
-                    <ImageView android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/flame"
-                        app:tint="@color/cr_rojo_batalla"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="1 día" android:textColor="@color/cr_texto_oscuro" android:textStyle="bold"/>
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <!-- Racha -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:layout_marginEnd="8dp">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/flame"
+                            app:tint="@color/cr_fuego" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="1"
+                            android:textColor="@color/cr_texto_primario"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="día de racha"
+                            android:textColor="@color/cr_texto_secundario"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- EXP -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:layout_marginStart="8dp">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/experiencia"
+                            app:tint="@color/cr_acento" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="7836"
+                            android:textColor="@color/cr_texto_primario"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="experiencia"
+                            android:textColor="@color/cr_texto_secundario"
+                            android:textSize="12sp" />
+                    </LinearLayout>
                 </LinearLayout>
 
+                <!-- Segunda fila de stats -->
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:background="@android:color/white"
-                    android:padding="12dp"
-                    android:layout_marginStart="5dp">
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/experiencia"
-                        app:tint="@color/cr_azul_rey"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="7836 EXP" android:textColor="@color/cr_texto_oscuro" android:textStyle="bold"/>
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <!-- Ejercicios completados -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:layout_marginEnd="8dp">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_ejercicios"
+                            app:tint="@color/cr_acento" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="124"
+                            android:textColor="@color/cr_texto_primario"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ejercicios"
+                            android:textColor="@color/cr_texto_secundario"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Precisión -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:layout_marginStart="8dp">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/experiencia"
+                            app:tint="@color/cr_fuego" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="87%"
+                            android:textColor="@color/cr_texto_primario"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="precisión"
+                            android:textColor="@color/cr_texto_secundario"
+                            android:textSize="12sp" />
+                    </LinearLayout>
                 </LinearLayout>
+
+                <!-- LOGROS -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOGROS RECIENTES"
+                    android:textColor="@color/cr_texto_secundario"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.15"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="10dp" />
+
+                <!-- Logro 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="14dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="🔥"
+                        android:textSize="22sp"
+                        android:background="@color/cr_hero_bg" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Primera racha"
+                            android:textColor="@color/cr_texto_primario"
+                            android:textStyle="bold"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Completaste 7 días seguidos"
+                            android:textColor="@color/cr_texto_secundario"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+50 XP"
+                        android:textColor="@color/cr_acento"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Logro 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="14dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="💻"
+                        android:textSize="22sp"
+                        android:background="@color/cr_hero_bg" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="100 ejercicios"
+                            android:textColor="@color/cr_texto_primario"
+                            android:textStyle="bold"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Completaste 100 retos de código"
+                            android:textColor="@color/cr_texto_secundario"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+100 XP"
+                        android:textColor="@color/cr_acento"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- DIVIDER -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/cr_divisor" />
+
+                <!-- LOGOUT -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/Btn_logout"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="8dp"
+                    android:text="CERRAR SESIÓN"
+                    android:textColor="@color/cr_peligro"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    app:strokeColor="@color/cr_peligro"
+                    app:strokeWidth="1.5dp"
+                    app:cornerRadius="12dp" />
+
             </LinearLayout>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/Btn_logout"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="CERRAR SESIÓN"
-                android:textColor="@color/cr_rojo_batalla"
-                android:textStyle="bold" />
-
         </LinearLayout>
-    </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
 </RelativeLayout>

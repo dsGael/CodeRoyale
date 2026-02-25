@@ -1,4 +1,5 @@
 <resources>
+    <string name="default_web_client_id">405859134273-2lov6n3crj1unnd0u3hn6h1hppfs6fsj.apps.googleusercontent.com</string>
     <string name="app_name">CodeRoyale</string>
     <string name="Item_Inicio">Inicio</string>
     <string name="Item_Ejercicios">Ejercicios</string>

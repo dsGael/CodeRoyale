@@ -5,14 +5,24 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0F0F0"
+    android:background="@color/cr_fondo"
     tools:context=".MainActivity">
 
+    <!-- TOP BAR -->
     <RelativeLayout
         android:id="@+id/ToolbarRL"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="@color/cr_blanco">
+        android:layout_height="60dp"
+        android:background="@color/cr_superficie">
+
+        <!-- Logo / ícono izquierda -->
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_ejercicios"
+            app:tint="@color/cr_acento" />
 
         <TextView
             android:id="@+id/TituloRL"
@@ -20,50 +30,87 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Code Royale"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:textColor="@color/cr_texto_primario" />
+
+        <!-- XP badge derecha -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/badge_acento"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/experiencia"
+                app:tint="@color/cr_fondo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="7836"
+                android:textColor="@color/cr_fondo"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_alignParentBottom="true"
-            android:background="#ccc" />
+            android:background="@color/cr_divisor" />
     </RelativeLayout>
 
+    <!-- BOTTOM NAV -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/BottomNV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/cr_blanco"
+        android:background="@color/cr_superficie"
+        app:itemIconTint="@color/cr_acento"
+        app:itemTextColor="@color/cr_texto_secundario"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/mi_menu" />
 
     <View
-        android:id="@+id/View1"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_above="@id/BottomNV"
-        android:background="#ccc" />
+        android:background="@color/cr_divisor" />
 
+    <!-- FRAGMENT CONTAINER -->
     <FrameLayout
         android:id="@+id/FragmentL1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/View1"
+        android:layout_above="@id/BottomNV"
         android:layout_below="@id/ToolbarRL" />
 
+    <!-- FAB -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/FAB"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_ejercicios"
-        android:layout_alignParentBottom="true"
+        android:layout_alignBottom="@id/BottomNV"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="80dp"
-
-        />
-
-
+        android:layout_marginBottom="72dp"
+        app:backgroundTint="@color/cr_acento"
+        app:tint="@color/cr_fondo"
+        app:elevation="8dp"
+        app:borderWidth="0dp" />
 
 </RelativeLayout>

@@ -1,13 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Base.Theme.CodeRoyale" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/cr_azul_rey</item>
-        <item name="colorOnPrimary">@android:color/white</item>
+    <style name="Theme.CodeRoyale" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Color principal -->
+        <item name="colorPrimary">@color/cr_acento</item>
+        <item name="colorPrimaryVariant">@color/cr_superficie</item>
+        <item name="colorOnPrimary">@color/cr_fondo</item>
 
-        <item name="colorSecondary">@color/cr_dorado</item>
-        <item name="colorOnSecondary">@color/cr_texto_oscuro</item>
+        <!-- Color de acento (este es el que causa el dorado) -->
+        <item name="colorSecondary">@color/cr_acento</item>
+        <item name="colorSecondaryVariant">@color/cr_acento</item>
+        <item name="colorOnSecondary">@color/cr_fondo</item>
 
-        <item name="android:windowBackground">@color/cr_beige_carta</item>
+        <!-- Fondo general -->
+        <item name="android:colorBackground">@color/cr_fondo</item>
+        <item name="colorSurface">@color/cr_superficie</item>
+        <item name="colorOnSurface">@color/cr_texto_primario</item>
+
+        <!-- Barra de navegación del sistema (la de abajo del Android) -->
+        <item name="android:navigationBarColor">@color/cr_superficie</item>
+        <item name="android:statusBarColor">@color/cr_superficie</item>
     </style>
-
-    <style name="Theme.CodeRoyale" parent="Base.Theme.CodeRoyale" />
 </resources>
