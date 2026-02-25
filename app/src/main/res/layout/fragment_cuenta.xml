@@ -73,7 +73,7 @@
                     android:layout_centerInParent="true"
                     android:layout_marginBottom="36dp"
                     android:padding="3dp"
-                    android:src="@drawable/profile"
+                    android:src="@drawable/login"
                     app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent"
                     app:strokeColor="@color/cr_acento"
                     app:strokeWidth="3dp" />
@@ -168,7 +168,6 @@
                     android:baselineAligned="false"
                     android:orientation="horizontal">
 
-                    <!-- Racha -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -201,7 +200,6 @@
                             android:textSize="12sp" />
                     </LinearLayout>
 
-                    <!-- EXP -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -235,7 +233,6 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Segunda fila de stats -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -243,7 +240,6 @@
                     android:orientation="horizontal"
                     android:layout_marginTop="10dp">
 
-                    <!-- Ejercicios completados -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -276,7 +272,6 @@
                             android:textSize="12sp" />
                     </LinearLayout>
 
-                    <!-- Precisión -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -310,6 +305,197 @@
                     </LinearLayout>
                 </LinearLayout>
 
+                <!-- INFORMACIÓN PERSONAL -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INFORMACIÓN"
+                    android:textColor="@color/cr_texto_secundario"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.15"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="4dp">
+
+                    <!-- Nombres -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/Txt_nombres"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Txt_nombres"
+                            android:textColor="@color/cr_texto_secundario"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/Tv_nombres"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Tv_nombres"
+                            android:textColor="@color/cr_texto_primario"
+                            android:textStyle="bold"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/cr_divisor"/>
+
+                    <!-- Email -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/Txt_email"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Txt_email"
+                            android:textColor="@color/cr_texto_secundario"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/Tv_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Tv_email"
+                            android:textColor="@color/cr_texto_primario"
+                            android:textStyle="bold"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/cr_divisor"/>
+
+                    <!-- Fecha de nacimiento -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/Txt_nacimiento"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Txt_nacimiento"
+                            android:textColor="@color/cr_texto_secundario"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/Tv_nacimiento"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Tv_nacimiento"
+                            android:textColor="@color/cr_texto_primario"
+                            android:textStyle="bold"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/cr_divisor"/>
+
+                    <!-- Miembro desde -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/Txt_miembro"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Txt_miembro"
+                            android:textColor="@color/cr_texto_secundario"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/Tv_miembro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Tv_miembro"
+                            android:textColor="@color/cr_texto_primario"
+                            android:textStyle="bold"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/cr_divisor"/>
+
+                    <!-- Teléfono -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/Txt_telefono"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Txt_telefono"
+                            android:textColor="@color/cr_texto_secundario"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/Tv_telefono"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Tv_telefono"
+                            android:textColor="@color/cr_texto_primario"
+                            android:textStyle="bold"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/cr_divisor"/>
+
+                    <!-- Estado de cuenta -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/Txt_estado_cuenta"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/Txt_estado_cuenta"
+                            android:textColor="@color/cr_texto_secundario"
+                            android:textSize="13sp" />
+
+                        <!-- Chip de estado -->
+                        <TextView
+                            android:id="@+id/Tv_estado_cuenta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Tv_estado_cuenta"
+                            android:textColor="@color/cr_fuego"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
                 <!-- LOGROS -->
                 <TextView
                     android:layout_width="wrap_content"
@@ -321,7 +507,6 @@
                     android:layout_marginTop="24dp"
                     android:layout_marginBottom="10dp" />
 
-                <!-- Logro 1 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -370,7 +555,6 @@
                         android:textSize="12sp" />
                 </LinearLayout>
 
-                <!-- Logro 2 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -419,7 +603,30 @@
                         android:textSize="12sp" />
                 </LinearLayout>
 
-                <!-- DIVIDER -->
+                <!-- OPCIONES -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OPCIONES"
+                    android:textColor="@color/cr_texto_secundario"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.15"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="10dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/Btn_editar_perfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="@string/Btn_editar_perfil"
+                    android:textColor="@color/cr_fondo"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    app:icon="@drawable/ic_editar"
+                    app:iconTint="@color/cr_fondo"
+                    app:backgroundTint="@color/cr_acento"
+                    app:cornerRadius="12dp" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -427,17 +634,18 @@
                     android:layout_marginBottom="8dp"
                     android:background="@color/cr_divisor" />
 
-                <!-- LOGOUT -->
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/Btn_logout"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
                     android:layout_marginTop="8dp"
-                    android:text="CERRAR SESIÓN"
+                    android:text="@string/Btn_cerrar_sesion"
                     android:textColor="@color/cr_peligro"
                     android:textStyle="bold"
                     android:letterSpacing="0.1"
+                    app:icon="@drawable/ic_salir"
+                    app:iconTint="@color/cr_peligro"
                     app:strokeColor="@color/cr_peligro"
                     app:strokeWidth="1.5dp"
                     app:cornerRadius="12dp" />
