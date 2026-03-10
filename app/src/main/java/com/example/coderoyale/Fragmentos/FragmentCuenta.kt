@@ -8,8 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.coderoyale.OpcionesLogin
+import com.example.coderoyale.R
 import com.example.coderoyale.databinding.FragmentCuentaBinding
 import com.google.firebase.auth.FirebaseAuth
+import kotlin.random.Random
 
 
 class FragmentCuenta : Fragment() {
@@ -34,6 +36,17 @@ class FragmentCuenta : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+        val numeroAleatorio = Random.nextInt(1, 7)
+        val nombreImagen="perfil_$numeroAleatorio"
+        val idImagen = resources.getIdentifier(nombreImagen, "drawable", mContext.packageName)
+        if (idImagen != 0) {
+            binding.IvPerfil.setImageResource(idImagen)
+        } else {
+            binding.IvPerfil.setImageResource(R.drawable.login)
+        }
+
 
         firebaseAuth = FirebaseAuth.getInstance()
         binding.BtnLogout.setOnClickListener {
